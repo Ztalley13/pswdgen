@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Password Generator</title>
+  <!--link rel="stylesheet" href="pswd.css" /-->
+ <body>
+   <form>
+     <table>
+       <tr>
+         <td>Password</td>
+         <td><input type="text" name="password" id="password"/></td>
+         <td><input type="button" name="pswdbtn" onclick="mkpswd()" value="generate"/></td>
+       </tr>
+     </table>
+   </form>
+  <script>
+    function mkpswd()
+    {
+    var inputbox = document.getElementById("password");
+    var result = "";
+    for(var i=0;i<10;i++)
+    {
+      var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890?!@#$%^&*+";
+      var random = Math.floor(Math.random() * 40);
+      result += chars.charAt(random);
+    }
+      inputbox.value = result;
+    }
+  </script>
+</body>
+</html>
