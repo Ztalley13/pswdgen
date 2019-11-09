@@ -1,0 +1,12 @@
+body{
+  background: lightblue;
+}
+
+.jumbotron{
+  align-content: center;
+}
+#charNum, #num, #sym {
+  padding-left: 10%;
+  margin: 5px;
+
+}
